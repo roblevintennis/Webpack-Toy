@@ -1,0 +1,15 @@
+@import '@mavenlink/design-system/src/styles/colors.css';
+@import '@mavenlink/design-system/src/styles/typography.css';
+
+.container {
+  /*
+   * In order to reuse the `.container` class from `base-widget.css`,
+   * we need to compose from it -- even when we are not providing additional styles.
+   */
+  composes: container from './base-widget.css';
+}
+
+.label {
+  composes: label from './base-widget.css';
+  font-family: var(--mavenlink-type-font-family);
+}

@@ -1,0 +1,11 @@
+:root {
+  --base-widget-color: red;
+}
+
+.container {
+  border: 1px solid var(--base-widget-color);
+}
+
+.label {
+  color: var(--base-widget-color);
+}
