@@ -6,14 +6,14 @@ import CoolWidget from './cool-widget';
 describe('#CoolWidget', () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<CoolWidget>Hello</CoolWidget>);
+    wrapper = shallow(<CoolWidget label="Hello" />);
   });
 
   afterEach(() => {
     wrapper.unmount();
   });
 
-  it('renders children', () => {
+  it('renders label text', () => {
     expect(wrapper.find('label').contains('Hello')).toBeTruthy();
   });
 
@@ -22,7 +22,7 @@ describe('#CoolWidget', () => {
   });
 
   it('uses className if provided', () => {
-    wrapper = shallow(<CoolWidget className='yoyo'>Hey</CoolWidget>);
+    wrapper = shallow(<CoolWidget className='yoyo' label="Hey" />);
     expect(wrapper.hasClass('yoyo')).toEqual(true);
   });
 

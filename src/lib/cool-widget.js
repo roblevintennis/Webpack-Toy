@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './cool-widget.css';
 
-export default function CoolWidget({ children, className }) {
+export default function CoolWidget({ label, className }) {
   return (
     <div className={className}>
       <label className={styles.label}>
-        {children}
+        {label}
         <input />
       </label>
     </div>
@@ -14,7 +14,7 @@ export default function CoolWidget({ children, className }) {
 }
 
 CoolWidget.propTypes = {
-  children: PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
   className: PropTypes.string,
 };
 
