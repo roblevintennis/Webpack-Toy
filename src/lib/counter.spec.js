@@ -100,4 +100,15 @@ describe('#Counter with react-testing-library', () => {
     expect(getByTestId('count').textContent).toEqual('You clicked 5 times');
     expect(document.body.style.background).toEqual('hotpink');
   });
+
+  it('sets background color to hotpink on 10th click', () => {
+    const { getByTestId } = render(<Counter />)
+    Array(10).fill().forEach(() => {
+      fireEvent.click(getByTestId('btn'))
+    });
+
+    expect(getByTestId('count').textContent).toEqual('You clicked 10 times');
+    expect(document.body.style.background).toEqual('hotpink');
+  });
 });
+

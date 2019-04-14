@@ -1,10 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
-function useBackgroundSwitcher(count) {
-  useEffect(() => {
-    document.body.style.background = count == 5 ? 'hotpink' : 'lightgreen';
-  }, [count]);
-}
+import React, { useState } from 'react';
+import { useBackgroundSwitcher } from './theme-switcher';
 
 export default function Counter() {
   const [count, setCount] = useState(0);
