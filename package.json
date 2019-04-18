@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode=development",
     "test": "karma start --single-run",
+    "jest": "node node_modules/.bin/jest",
     "lint": "eslint src/**/*.js",
     "build": "webpack --mode=production"
   },
@@ -31,6 +32,15 @@
     "webpack-cli": "^3.0.2",
     "webpack-dev-server": "^3.1.4"
   },
+  "jest": {
+    "testRegex": "./lib/jest/.*-spec.js(x)?$",
+    "rootDir": ".",
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
   "babel": {
     "presets": [
       "@babel/env",
@@ -52,7 +62,9 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
+    "identity-obj-proxy": "^3.0.0",
     "jasmine-core": "^3.4.0",
+    "jest": "^24.7.1",
     "karma": "^4.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^2.0.1",
