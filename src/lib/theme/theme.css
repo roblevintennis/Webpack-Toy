@@ -1,0 +1,10 @@
+/* theme.css */
+@import 'options.css';
+
+.primary {
+  background-color: var(--primary);
+}
+
+.secondary {
+  background-color: var(--secondary);
+}
