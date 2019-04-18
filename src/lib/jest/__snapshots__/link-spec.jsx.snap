@@ -2,6 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <a
+  className="foo"
   href="http://www.facebook.com"
 >
   Facebook
