@@ -1,4 +1,5 @@
 :root {
-  --primary: lightblue;
-  --secondary: lightgreen;
+  --primary: #499DF5;
+  --secondary: #6ed3cf;
+  --button-text: white;
 }

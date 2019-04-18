@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 
 const CoolWidget = lazy(() => import("./lib/cool-widget"));
 const Counter = lazy(() => import("./lib/counter"));
-const PrimaryButton = lazy(() => import("./lib/theme/button-primary"));
-const SecondaryButton = lazy(() => import("./lib/theme/button-secondary"));
+const PrimaryButton = lazy(() => import("./lib/theme/button-primary.jsx"));
+const SecondaryButton = lazy(() => import("./lib/theme/button-secondary.jsx"));
 
 ReactDOM.render(
   <Suspense fallback={<p>loading....</p>}>
