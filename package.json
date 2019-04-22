@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode=development",
     "test": "karma start --single-run",
+    "test:all": "yarn jest && karma start --single-run",
     "jest": "node node_modules/.bin/jest",
     "jest-update": "node node_modules/.bin/jest --updateSnapshot",
     "lint": "eslint src/**/*.js",
@@ -34,7 +35,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "jest": {
-    "testRegex": "./lib/jest/.*-spec.js(x)?$",
+    "testRegex": "./.*jest-spec.js(x)?$",
     "rootDir": ".",
     "verbose": true,
     "moduleNameMapper": {

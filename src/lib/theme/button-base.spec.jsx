@@ -1,6 +1,7 @@
 import React from 'react';
 import theme from './theme.css';
 import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 import Button from './button-base.jsx';
 
 describe('#Button defaults', () => {
