@@ -1,6 +1,11 @@
 /* theme.css */
 @import 'options.css';
 
+.base {
+  background-color: var(--neutral);
+  color: var(--black);
+}
+
 .primary {
   background-color: var(--primary);
   color: var(--button-text);
