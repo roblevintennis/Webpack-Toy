@@ -3,6 +3,24 @@ import { shallow } from 'enzyme';
 import styles from './cool-widget.css';
 import CoolWidget from './cool-widget';
 
+it('spread object works', () => {
+  let wrapper;
+  const props = {
+    subjectType: 'workspace',
+    isEditing: false,
+    closeEdit: () => {},
+    startEdit: () => {},
+    handleDelete: () => {},
+    handleSave: () => {},
+    handleCheckboxToggle: () => {},
+    label: 'my label',
+    className: 'klass',
+  };
+  wrapper = shallow(<CoolWidget {...props} />);
+  expect(wrapper.find('label').contains('my label')).toBeTruthy();
+})
+
+
 describe('#CoolWidget', () => {
   let wrapper;
   beforeEach(() => {
